@@ -1,0 +1,33 @@
+[project]
+name = "cache-ops"
+version = "0.1.0"
+description = "Cache ops workspace"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+backend = [
+  "torch>=2.2.0",
+  "transformers>=4.46.0",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+markers = [
+  "logical: backend-agnostic logical correctness tests",
+  "gpu: tests intended to run on GPU machines",
+  "integration: tests that exercise concrete backend implementations",
+]

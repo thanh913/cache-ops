@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Logs & data artifacts
+logs/
+
+# Editors & OS
+.vscode/
+.DS_Store
+
+# Claude
+.claude/
+
+# Environment
+.venv/
+
+# Model weights
+*.safetensors
+*.pt
+*.bin
+*.gguf
